@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Mess Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+   .w3-btn {margin-bottom:10px;}
+  </style>
+  {% load static %} <link rel="stylesheet" href="{% static 'mess/stylemess.css' %}">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="w3-container">
+	<h1><span class="yellow">Mess Details</span></h1>
+<table class="w3-table-all w3-card-4">
+	<thead>
+		<tr class="w3-light-grey w3-hover-blue">
+			<th>Mess Name</th>
+			<th>Veg/Non-Veg</th>
+			<th>Mess Menu</th>
+			<th>Total Seats</th>
+			<th>Available Seats</th>
+			<th>Status</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="w3-light-grey w3-hover-blue">
+			<td>8th block Mess</td>
+			<td>Veg</td>
+			<td><button type="button" class="btn btn-outline-info" href="#"><b>Menu</b></button></td>
+			<td>369</td>
+			<td>75</td>
+            <td><button type="button" class="btn btn-outline-success" href="messallot/allot"><b>Apply</b></button></td>
+		</tr>
+		<tr class="w3-light-grey w3-hover-blue">
+			<td>7th block Mess</td>
+			<td>Non-Veg</td>
+			<td><button type="button" class="btn btn-outline-info"href="#"><b>Menu</b></button></td>
+			<td>669</td>
+			<td>375</td>
+			<td><button type="button" class="btn btn-outline-success" href="messallot/allot"><b>Apply</b></button></td>
+		</tr>
+		<tr class="w3-light-grey w3-hover-blue">
+			<td>5th block Mess</td>
+			<td>Veg</td>
+			<td><button type="button" class="btn btn-outline-info" href="messallot.html"><b>Menu</b></button></td>
+			<td>535</td>
+			<td>347</td>
+			<td><button type="button" class="btn btn-outline-success" href="messallot/allot"><b>Apply</b></button></td>
+		</tr>
+        <tr class="w3-light-grey w3-hover-blue">
+			<td>3rd block Mess</td>
+			<td>Non-Veg</td>
+			<td><button type="button" class="btn btn-outline-info" href="#"><b>Menu</b></button></td>
+			<td>758</td>
+			<td>255</td>
+			<td><button type="button" class="btn btn-outline-success" href="messallot/allot"><b>Apply</b></button></td>
+		</tr>
+        <tr class="w3-light-grey w3-hover-blue">
+			<td>Mega Mess</td>
+			<td>Veg</td>
+			<td><button type="button" class="btn btn-outline-info" href="#"><b>Menu</b></button></td>
+			<td>1085</td>
+			<td>512</td>
+			<td><button type="button" class="btn btn-outline-success" href="messallot/allot"><b>Apply</b></button></td>
+		</tr>
+        <tr class="w3-light-grey w3-hover-blue">
+			<td>PG block Mess</td>
+			<td>Non-Veg</td>
+			<td><button type="button" class="btn btn-outline-info" href="messallot.html"><b>Menu</b></button></td>
+			<td>455</td>
+			<td>185</td>
+			<td><button type="button" class="btn btn-outline-success" href="messallot/allot"><b>Apply</b></button></td>
+		</tr>
+	</tbody>
+</table>
+
+</div>
+</body>
+</html>
