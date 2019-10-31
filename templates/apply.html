@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apply</title>
+</head>
+<body>
+    <form name="form" action="{% url 'apply' %}" method="post">
+        {% csrf_token %}
+         <select name="mess_type" required>
+            <option value="select">---Select---</option>
+            <option value="veg">Veg</option>
+             <option value="non_veg">Non Veg</option>
+         </select><br>
+         <input type="submit" name="Apply">
+</body>
+</html>

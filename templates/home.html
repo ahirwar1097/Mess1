@@ -31,7 +31,16 @@
                     <ul class="nav navbar-nav">
                         <li class="active nav-item sr-only"><a href="index.html">Home</a></li>
                         <li class="nav-item"><a  href="#Home">Home</a></li>
-                        <li class="nav-item"><a  href="accounts/mess">Mess</a></li>
+
+                        {% if user.is_authenticated %}
+
+                        <li class="nav-item"><a>Hello, {{request.user}}</a></li>
+                        <li class="nav-item"><a  href="accounts/logout">Logout</a></li>
+                        <li class="nav-item"><a  href="apply">Mess</a></li>
+                        {% else %}
+
+                        <li class="nav-item"><a  href="register">Register</a></li>
+                        {% endif %}
                         <li class="nav-item"><a  href="contact.html">Contact</a></li>
 
 
@@ -46,7 +55,7 @@
             <h1 class="title">Mess Allotment System</span></h1>
             <div class="btns">
                 <a class="btn btn-cta-secondary" href="http://iris.nitk.ac.in/" target="_blank" >IRIS</a>
-                <a class="btn btn-cta-primary" href="accounts/login" target="_self">Apply Now</a>
+                <a class="btn btn-cta-primary" href="accounts/login">Apply Now</a>
             </div>
         </div>
     </section>

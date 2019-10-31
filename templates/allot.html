@@ -5,20 +5,23 @@
     <title>Mess Allotment</title>
 </head>
 <body>
-    <div>
+<div>
+    <form action="{% url 'allot_details' %}" method="POST">
+        {% csrf_token %}
         <select name="Messes">
-            <option value="pg_block">PG Block Mess</option>
-            <option value="third_block">Third Block Mess</option>
-            <option value="fourth_block">Fourth Block Mess</option>
-            <option value="fifth_block">Fifth Block Mess</option>
-            <option value="seventh_block">Seventh Block Mess</option>
-            <option value="eighth_block">Eighth Block Mess</option>
-             <option value="mega_mess">Mega Mess</option>
-            <option value="girls_block1">Girls Mess1</option>
-            <option value="girls_block2">Girls Mess2</option>
+            <option value="select">---Select---</option>
+            {% for m in sobj %}
+            <option value="{{m.mess_id}}">{{m.mess_name}}</option>
+            {% endfor %}
         </select>
         <br><br>
-        <input type="submit" value="Apply">
+        <button type="submit" value="Apply" action="allot">Apply</button>
+    </form>
+    <div>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
     </div>
+</div>
 </body>
 </html>
